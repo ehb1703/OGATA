@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio Sesion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie-edge">
+        <link rel="stylesheet" type="text/css" href="../lib/bootstrap-4/bootstrap.css">
+        <link href="../css/header.css" >
+    </head>
+    <body class="bg-secondary">
+        <!-- **************************************CONTENIDO***************************************-->
+         <div>
+            <object data="header.html"  width="100%" height="56px"></object> 
+        </div>
+        <div>
+            <p class="text-white">Abrir Formulario Oprima el Boton</p>
+            <button class="btn btn-dark" data-toggle="modal" data-target="#myModal">Abrir Formulario</button>
+        </div>
+
+
+        <!-- The Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Gerador de Tikets</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body background-red" >
+                    <form action="">
+                        <div class="col-11">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_serie">Serie:</label>
+                                <input class="col-2 form-control" type="text" name="txt_serie" id="txt_serie" placeholder="Serie">
+                                <label class="col-1 col-form-label" for="txt_folio">Folio:</label>
+                                <input class="col-2 form-control" type="text" name="txt_folio" id="txt_folio" placeholder="Folio">
+                                <label class="col-2 col-form-label" for="txt_fecha"> Fecha:</label>
+                                <input class="col-3 form-control" type="text" name="txt_fecha" id="txt_fecha" placeholder="Fecha">
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_CCliente">Cliente:</label>
+                                <select class="form-control col-3 "name="txt_CCliente" placeholder="Codigo" id="txt_CCliente">
+                                  <option>Seleccionar</option>
+                                </select>
+                                <input class="form-control col-7" type="text" name="txt_NCliente" id="txt_NCliente" placeholder="Nombre Cliente"> 
+                            </div>
+                             <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_CCorreo1">Correo 1:</label>
+                                <input class="form-control col-4 " type="email" name="txt_CCorreo" id="txt_CCorreo1" placeholder="Correo 1">
+                                <label class="col-2 col-form-label" for="txt_CCorreo2">Correo 2:</label>
+                                <input class="form-control col-4 " type="email" name="txt_CCorreo" id="txt_CCorreo2" placeholder="Correo 2">
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_atenciona">Atención a:</label>
+                                <input class="col-4 form-control" type="text" name="txt_atenciona" id="txt_atenciona" placeholder="Nombre de persona atendida">
+                                <label class="col-2 col-form-label" for="txt_sistema">Sistema:</label>
+                                <select class="col-4 form-control" name="txt_sistema" id="txt_sistema">
+                                  <option>Seleccionar</option>
+                                </select>
+                            </div>
+                             <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_Cagente">Agente:</label>
+                                <select class="col-3 form-control" name="txt_Cagente" placeholder="Codigo" id="txt_Cagente">
+                                  <option>Seleccionar</option>
+                                </select>
+                                <input class="col-7 form-control" type="text" name="txt_Nagente" id="txt_Nagente" placeholder="Nombre">
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_problema">Problema:</label>
+                                <input class="col-10 form-control" type="text" name="txt_problema" id="txt_problema" placeholder="Descripcion del error">
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txta_solucion">Solución:</label>
+                                <textarea rows="8" cols="50" class="col-10 form-control" placeholder="Escriba aqui.." id="txta_solucion"></textarea>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="txt_estatus">Estatus:</label>
+                                <select class="col-3 form-control" name="txt_estatus" id="txt_estatus">
+                                  <option>Seleccionar</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">        
+                                <button type="button" class="btn btn-info col-2">Guardar</button>&nbsp
+                                <button type="button" class="btn btn-info col-2">Eliminar</button>&nbsp
+                                <button type="button" class="btn btn-info col-2">Limpiar</button>&nbsp
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        <!-- ************************************** LIBERIAS DE BOOSTRAP***************************************-->    
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>
+

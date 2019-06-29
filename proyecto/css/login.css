@@ -1,0 +1,87 @@
+@import url('Roboto-typography.css');
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background: url('../files/Login-fondo.jpg');
+	background-size: cover;
+}
+
+.main-section{
+	margin: 0 auto;
+	margin-top: 130px;
+	padding: 0;
+}
+/*Cuadro mayor que encierra a todo el formulario */
+.modal-content{
+	background-color: #CACCCF;
+	opacity: .90;
+	padding:  0 18px;
+	box-shadow: 0px 0px 3px #848484;
+}
+
+.user-img{
+	margin-top: -50px; /* Espacio antes de la imagen*/
+	margin-bottom: 35px; /* espacio debajo de la imagen*/
+}
+.user-img img{
+	/*height: 100px;*/
+	width: 250px;
+	border-radius: 50px;
+	box-shadow: 0px 0px 3px #848484;
+}
+.form-group{
+	margin-bottom: 25px;
+}
+.form-group input{
+	height: 42px; /*Altura de los botones¨*/
+	border-radius: 5px;
+	border: 0;
+	font-size: 18px; /*tamaño letra*/
+	padding-left: 54px;
+}
+
+.form-group::before{
+	font-family: 'iconos';
+	content: "\e902";
+	size:  30px;
+	position: absolute;
+	font size: 22px;
+	color:  #555e60;
+	left: 28px;
+	padding-top: 4px;
+}
+
+.form-group:last-of-type::before{
+	content: "\e900";
+}
+
+button {
+	width: 40%;
+	margin: 5px 0 25px;
+}
+
+.btn{
+	background-color: #27c2a5;
+	color: #fff;
+	font-size: 19px;
+	padding: 7px 14px;
+	border-radius: 5px;
+	border-bottom: 4px solid #219882;
+
+}
+
+.btn:hover, .btn:focus{
+	background-color: #25a890!important;
+	border-bottom: 4px solid #25a890!important;
+}
+
+.icon-login{
+	font-size: 20px;
+	margin-right: 7px;
+}
+.forgot{
+	padding: 5px 0 25px;
+}
+.forgot a{
+	color: black;
+}
