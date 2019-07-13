@@ -3,37 +3,35 @@
 namespace OGATA\Http\Controllers\Auth;
 
 use OGATA\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
 
-    use AuthenticatesUsers;
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function login()
     {
-        $this->middleware('guest')->except('logout');
-    }
+        $datos = $this->validate(request(),[
+            'nombre' => 'required|string',
+            'password' => 'required|string'
+            // $this->username() => 'required|string',
+             //$this->getAuthPassword() => 'required|string'
+
+        ]);
+
+         if(Auth::attempt(['nombre'=>$datos['nombre'] , 'password'=>$datos['password']])){
+             return 'Tu sesion ha iniciado correctamente';
+        }
+
+    
+       // if(Auth::attempt($credentials)){
+         //   return "entro";
+            //redirect()->route('dashboard');""
+        else{
+
+        return back()
+            ->withErrors(['nombre' => 'Estas credenciales no coinciden con nuestros registros'])
+            -> withInput(request(['nombre']));
+       }}
+    
+    
 }

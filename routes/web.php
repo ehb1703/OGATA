@@ -12,15 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
+
+Route::get('dashboard' , 'DashboardController@index')->name('dashboard');
 
 Route::get('/name/{name}' ,function($name){
 	return 'Hola soy '.$name;
 });
 
-Route::get('/login',function(){
-	return view('vistashtml.ejemplo2');
-});
-
+Route::post('login','Auth\LoginController@login')->name('login');
 Route::resource('form', 'FormuController');

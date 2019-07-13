@@ -10,13 +10,24 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+    protected $table = 'USUARIO';
+    
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
+    public function username()
+    {
+        return $this->nombre;
+    }
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+         'nombre', 'password'
     ];
 
     /**
@@ -24,9 +35,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
+   protected $hidden = [
+        'password', 'remember_token'
     ];
+
 
     /**
      * The attributes that should be cast to native types.
